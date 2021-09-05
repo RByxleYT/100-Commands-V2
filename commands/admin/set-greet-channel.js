@@ -38,7 +38,7 @@ module.exports = {
     let Current = await GetType(Type);
     
     const Embed = new Discord.MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#4169E1")
     .setTitle(`Sucess`)
     .setDescription(`${Current === "Welcome" ? "Welcome" : "Leave"} Channel Has Been Setted - <#${Channel.id}>`)
     .setFooter(`Setted By ${message.author.username}`)
