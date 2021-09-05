@@ -22,13 +22,13 @@ module.exports = {
 		let options = ['punishment', 'age', 'logs', 'show', "disable"];
 		if (!option)
 			return message.channel.send(
-				`:x: | The option argument must be one of:\n **${options.join(', ')}**`
+				`<:Decline:864080227738320896> | The option argument must be one of:\n **${options.join(', ')}**`
 			);
 		function check(opt) {
 			return options.includes(opt);
 		}
 		if (!check(option.toLowerCase())) {
-			return message.channel.send(':x: | **The provided option is invalid**');
+			return message.channel.send('<:Decline:864080227738320896> | **The provided option is invalid**');
 		}
 		switch (option.toLowerCase()) {
 			case 'punishment':
@@ -64,7 +64,7 @@ module.exports = {
 			case 'logs':
 				const channel = message.mentions.channels.first();
 				if (!channel)
-					return message.channel.send(':x: | **Specify the channel**');
+					return message.channel.send('<:Decline:864080227738320896> | **Specify the channel**');
 				db.set(`logs.${message.guild.id}`, channel.id);
 				return message.channel.send(
 					'**The logs channel has been set to** ' + channel.toString()
@@ -87,7 +87,7 @@ module.exports = {
 						`Logs Channel`,
 						`${logs !== 'None' ? `<#${logs}>` : 'None'}`
 					)
-					.setColor('RANDOM')
+					.setColor('#4169E1')
 					.setFooter(
 						message.guild.name,
 						message.guild.iconURL({ dynamic: true })
