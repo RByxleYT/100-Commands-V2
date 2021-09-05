@@ -13,14 +13,14 @@ module.exports = {
 
     let cmdname = args[0];
 
-    if(!cmdname) return message.channel.send(":x: Gimm me commmand name, `delcmd <cmd_name>`")
+    if(!cmdname) return message.channel.send("<:Decline:864080227738320896> Gimm me commmand name, `delcmd <cmd_name>`")
 
     let database = db.fetch(`cmd_${message.guild.id}`)
 
     if(database) {
       let data = database.find(x => x.name === cmdname.toLowerCase())
 
-      if(!data) return message.channel.send(":x: Unable to find this command.")
+      if(!data) return message.channel.send("<:Decline:864080227738320896> Unable to find this command.")
 
       let value = database.indexOf(data)
       delete database[value]
@@ -34,7 +34,7 @@ module.exports = {
 
 
     } else {
-      return message.channel.send(":x: Sorry but i am unable to find that command!")
+      return message.channel.send("<:Decline:864080227738320896> Sorry but i am unable to find that command!")
     
 
 
