@@ -40,13 +40,13 @@ module.exports = {
            'eur' : "europe"
          }
         await message.guild.setRegion(serverAliases[serverRegion])
-        message.channel.send(`Done ✅ | Server Region changed to ${serverAliases[serverRegion]}`)
+        message.channel.send(`Done <:Accepted:864080263172718603> | Server Region changed to ${serverAliases[serverRegion]}`)
         
       }
 
       catch(error) {
         console.log(error)
-        message.channel.send(`Oops ❌ | An error occured!`)
+        message.channel.send(`Oops <:Decline:864080227738320896> | An error occured!`)
       }
     }
 
