@@ -16,14 +16,14 @@ module.exports = {
 				new MessageEmbed()
 					.setTitle('Error')
 					.setDescription(
-						':x: Sorry but you dont have permission to use this command!!'
+						'<:Decline:864080227738320896> Sorry but you dont have permission to use this command!!'
 					)
-					.setColor('#FF0000')
+					.setColor('EF4949')
 					.setTimestamp()
 			);
 
 		let rrembed = new MessageEmbed()
-			.setColor('RANDOM')
+			.setColor('#4169E1')
 			.setTitle('What do u want to do?')
 			.setDescription(
 				`
