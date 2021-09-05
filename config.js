@@ -1,3 +1,3 @@
-exports.PREFIX = "!";
-exports.OWNER_ID = "";
-exports.Owner_Name = "DarkThunder#1899";
+exports.PREFIX = "Helper, ";
+exports.OWNER_ID = "746275512145674351";
+exports.Owner_Name = "RByxle#9999";
