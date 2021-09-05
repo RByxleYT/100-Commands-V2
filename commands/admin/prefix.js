@@ -35,7 +35,7 @@ module.exports = {
 			message.channel.send(prefEmbed);
 		} else if (option.toLowerCase() === 'reset') {
 			db.delete(`prefix_${message.guild.id}`);
-			return await message.channel.send('Reseted Prefix ✅');
+			return await message.channel.send('Reseted Prefix <:Accepted:864080263172718603>');
 		} else if (args[1]) {
 			return message.channel.send('You can not set prefix a double argument');
 		} else if (args[0].length > 4) {
@@ -44,11 +44,11 @@ module.exports = {
 			);
 		} else if (args.join('') === PREFIX) {
 			db.delete(`prefix_${message.guild.id}`);
-			return await message.channel.send('Reseted Prefix ✅');
+			return await message.channel.send('Reseted Prefix <:Accepted:864080263172718603>');
 		} else {
 
 		db.set(`prefix_${message.guild.id}`, args[0]);
-		await message.channel.send(`Done ✅ | Bot Prefix Set to ${args[0]}`);
+		await message.channel.send(`Done <:Accepted:864080263172718603> | Bot Prefix Set to ${args[0]}`);
 		}
 	}
 };
