@@ -1,6 +1,6 @@
 {
-  "name": "discord-moderation-bot",
-  "version": "2.0.0",
+  "name": "rbyxleshelperv2",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -17,6 +17,7 @@
     "common-tags": "^1.8.0",
     "discord-canvas": "^1.4.1",
     "discord-image-generation": "^1.4.9",
+    "discord-inline-reply": "^1.0.3",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "enmap": "^5.8.5",
