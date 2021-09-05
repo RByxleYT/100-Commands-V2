@@ -35,7 +35,7 @@ module.exports = {
       );
       const Added = new MessageEmbed()
         .setTitle(`Emoji Added`)
-        .setColor(`RANDOM`)
+        .setColor('45BB8A')
         .setDescription(
           `Emoji Has Been Added!\nName : ${name || `${customemoji.name}`}\nPreview : [Click Me](${Link})`
         );
