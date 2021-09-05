@@ -46,7 +46,7 @@ module.exports = {
     const embed = new discord.MessageEmbed()
     .setTitle(`Alt Detector - Account age < ${days} Days`)
     .setDescription(array.join("\n\n") || "No alts found")
-    .setColor("RANDOM")
+    .setColor("#4169E1")
 
     if (array.length <= interval) {
     
