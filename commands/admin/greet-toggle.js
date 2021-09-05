@@ -11,13 +11,13 @@ module.exports = {
   run: async(bot, message, args) => {
     if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new MessageEmbed()
     .setTitle("Error")
-    .setDescription(":x: Sorry but you dont have permission to use this command!!")
-    .setColor("#FF0000")
+    .setDescription("<:Decline:864080227738320896> Sorry but you dont have permission to use this command!!")
+    .setColor('EF4949')
     .setTimestamp()
     );
     
    let embed = new MessageEmbed()
-   .setColor("RANDOM")
+   .setColor("#4169E1")
    .setTitle("What Setup do u want?")
    .setDescription(`
    **1.** \`Welcome Toggle\`\n**2.** \`Leave Toggle\``)
@@ -48,7 +48,7 @@ module.exports = {
    function welcomesystem(){
  
   let wembed = new MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#4169E1")
     .setTitle("What do u want to do?")
     .setDescription(`
 **1.** \`Welcome Toggle On\` - *Turns the welcome system on*
@@ -65,7 +65,7 @@ module.exports = {
             db.set(`Weltog_${message.guild.id}`, true)
             return message.channel.send(new MessageEmbed()
             .setTitle("Success!!")
-            .setColor("RANDOM")
+            .setColor("#4169E1")
             .setDescription("I have successfully turned on the welcome system in this server")
             .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({
               dynamic: true
@@ -81,7 +81,7 @@ module.exports = {
               db.delete(`Weltog_${message.guild.id}`);
               return message.channel.send(new MessageEmbed()
               .setTitle("Success")
-              .setColor("RANDOM")
+              .setColor("#4169E1")
               .setDescription("I have successfully turned off the welcome system in the server")
               .setTimestamp()
               );
@@ -101,7 +101,7 @@ module.exports = {
 function leavesystem(){
  
   let wembed = new MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#4169E1")
     .setTitle("What do u want to do?")
     .setDescription(`
 **1.** \`Leave Toggle On\` - *Turns the Leave system on*
@@ -118,7 +118,7 @@ function leavesystem(){
             db.set(`leavtog_${message.guild.id}`, true)
             return message.channel.send(new MessageEmbed()
             .setTitle("Success!!")
-            .setColor("RANDOM")
+            .setColor("#4169E1")
             .setDescription("I have successfully turned on the Leave system in this server")
             .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({
               dynamic: true
@@ -134,7 +134,7 @@ function leavesystem(){
               db.delete(`leavtog_${message.guild.id}`);
               return message.channel.send(new MessageEmbed()
               .setTitle("Success")
-              .setColor("RANDOM")
+              .setColor("#4169E1")
               .setDescription("I have successfully turned off the Leave system in the server")
               .setTimestamp()
               );
