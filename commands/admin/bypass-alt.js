@@ -26,18 +26,18 @@ module.exports = {
 		let ID = args[1];
 		if (!option)
 			return message.channel.send(
-				`:x: | **The option must be one of ${options.join(', ')}**`
+				`<:Decline:864080227738320896> | **The option must be one of ${options.join(', ')}**`
 			);
 		if (!ID)
-			return message.channel.send(`:x: | **The ID is a required argument**`);
+			return message.channel.send(`<:Decline:864080227738320896> | **The ID is a required argument**`);
 		if (!check(option.toLowerCase()))
 			return message.channel.send(
-				`:x: | **The option arugument must be one of ${options.join(', ')}**`
+				`<:Decline:864080227738320896> | **The option arugument must be one of ${options.join(', ')}**`
 			);
 		switch (option.toLowerCase()) {
 			case 'add':
 				if (!checkUser(ID))
-					return message.channel.send(`:x: | **The user doesnt exist**`);
+					return message.channel.send(`<:Decline:864080227738320896> | **The user doesnt exist**`);
 				else {
 					let user = await fetchUser(ID);
           let pog = db.get(`bypass.${message.guild.id}`);
@@ -54,7 +54,7 @@ module.exports = {
 				break;
 			case 'remove':
 				if (!checkUser(ID))
-					return message.channel.send(`:x: | **The user doesnt exist**`);
+					return message.channel.send(`<:Decline:864080227738320896> | **The user doesnt exist**`);
 				else {
 					let user = await fetchUser(ID);
 					let pog = db.get(`bypass.${message.guild.id}`);
