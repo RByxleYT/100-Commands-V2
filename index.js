@@ -1,5 +1,5 @@
 require("dotenv").config();
-console.log("Hi");
+console.log("Testing");
 //Defining dependencies
 const { Client, Collection } = require('discord.js');
 const { PREFIX } = require('./config.js');
@@ -89,7 +89,7 @@ const mentionRegex = RegExp(`^<@!?${bot.user.id}>$`);
       new Discord.MessageEmbed()
       .setThumbnail(`${message.author.displayAvatarURL({ dynamic: true })}`)
       .setDescription(`Hey <@${message.author.id}>, My prefix for this guild is \`\`\`${Prefix}\`\`\`.Use \`\`\`${Prefix}help\`\`\` or <@${bot.user.id}> help to get a list of commands`)
-       .setColor("RANDOM")
+       .setColor("#4169E1")
        .setFooter(`Requested by ${message.author.username}`)
        .setTimestamp()
   )};
@@ -98,7 +98,7 @@ const mentionRegex = RegExp(`^<@!?${bot.user.id}>$`);
         const info = db.fetch(`afk-${message.author.id}+${message.guild.id}`)
         await db.delete(`afk-${message.author.id}+${message.guild.id}`)
         await db.delete(`aftime-${message.author.id}+${message.guild.id}`)
-        message.channel.send(`Welcome back ${message.author.username}, Great to see you!!`)
+        message.channel.send(`Welcome back ${message.author.username}, Great to see you!`)
     }
     //checking for mentions
     if(message.mentions.members.first()) {
@@ -124,7 +124,7 @@ const mentionRegex = RegExp(`^<@!?${bot.user.id}>$`);
     if(!message.content.startsWith(Prefix)) return;
     
      if (!message.guild.me.permissionsIn(message.channel).has("EMBED_LINKS"))
-        return message.reply("**:x: I am missing the Permission to `EMBED_LINKS`**");
+        return message.reply("**<:Decline:864080227738320896> I am missing the Permission to `EMBED_LINKS`**");
 
   let args = message.content
     .slice(matchedPrefix.length)
@@ -177,7 +177,7 @@ const mentionRegex = RegExp(`^<@!?${bot.user.id}>$`);
 
 bot.on("message", async message => {
       let disabled = new MessageEmbed()
-    .setColor("#FF0000")
+    .setColor('EF4949')
     .setDescription("Chat Bot is disabled by the Owner in this Server!")
     .setFooter(`Requested by ${message.author.username}`)
   
@@ -201,7 +201,7 @@ bot.on("message", async message => {
      message.channel.send(new MessageEmbed()
      .setTitle(bot.user.username, bot.user.displayAvatarURL())
      .setDescription(`Your Message : **${message}**\nMy Message : **${data.cnt}**`)
-     .setColor("RANDOM")
+     .setColor("#4169E1")
      .setFooter(`Talking with ${message.author.username}`, message.author.displayAvatarURL({
        dynamic: true
      }))
@@ -247,8 +247,6 @@ let roles = bot.setups.get(member.guild.id, "welcome.roles");
   if (!sMessage) sMessage = `Welcome To The Server!`;
   let sWelcomeImage = await db.fetch(`WelIm_${member.guild.id}`);
   
-  if (member.user.username.length > 25) member.user.username = member.user.username.slice(0, 25) + "...";
-  if (member.guild.name.length > 15) member.guild.name = member.guild.name.slice(0, 15) + "...";
   
   let sMsg = sMessage.replace(/{user}/g, `${member}`)
         .replace(/{user_tag}/g, `${member.user.tag}`)
@@ -277,7 +275,7 @@ let roles = bot.setups.get(member.guild.id, "welcome.roles");
   .setDescription(sMsg)
   .attachFiles([attachment])
   .setImage('attachment://welcome.png')
-  .setColor("RANDOM");
+  .setColor("#4169E1");
   return bot.channels.cache.get(sChannel).send(Embed);
   
       } catch (e) {
@@ -293,8 +291,6 @@ let roles = bot.setups.get(member.guild.id, "welcome.roles");
   if (!Message) Message = `Welcome To The Server!`;
   let WelcomeImage = await db.fetch(`WelIm_${member.guild.id}`);
   
-  if (member.user.username.length > 25) member.user.username = member.user.username.slice(0, 25) + "...";
-  if (member.guild.name.length > 15) member.guild.name = member.guild.name.slice(0, 15) + "...";
   
   let Msg = Message.replace(/{user}/g, `${member}`)
         .replace(/{user_tag}/g, `${member.user.tag}`)
@@ -345,8 +341,7 @@ let roles = bot.setups.get(member.guild.id, "welcome.roles");
   if (!sMessage) sMessage = `${member.user.username} Has Left The Server!`;
   let sLeaveImage = await db.fetch(`Leaveim_${member.guild.id}`);
   
-  if (member.user.username.length > 25) member.user.username = member.user.username.slice(0, 25) + "...";
-  if (member.guild.name.length > 15) member.guild.name = member.guild.name.slice(0, 15) + "...";
+
   
   let sMsg = sMessage.replace(/{user}/g, `${member}`)
         .replace(/{user_tag}/g, `${member.user.tag}`)
@@ -375,7 +370,7 @@ let roles = bot.setups.get(member.guild.id, "welcome.roles");
   .setDescription(sMsg)
   .attachFiles([attachment])
   .setImage('attachment://leave.png')
-  .setColor("RANDOM");
+  .setColor("#4169E1");
   return bot.channels.cache.get(sChannel).send(Embed);
   
       } catch (e) {
@@ -390,8 +385,7 @@ let roles = bot.setups.get(member.guild.id, "welcome.roles");
   if (!Message) Message = `${member.user.username} Has Left The Server!`;
  let LeaveImage = await db.fetch(`Leaveim_${member.guild.id}`);
   
-  if (member.user.username.length > 25) member.user.username = member.user.username.slice(0, 25) + "...";
-  if (member.guild.name.length > 15) member.guild.name = member.guild.name.slice(0, 15) + "...";
+
   
   let Msg = Message.replace(/{user}/g, `${member}`)
         .replace(/{user_tag}/g, `${member.user.tag}`)
@@ -432,8 +426,6 @@ bot.on('guildMemberAdd', async member => {
 	let logs = await wb.get(`logs.${member.guild.id}`);
 	let punishment = wb.get(`punishment.${member.guild.id}`);
 	let bypassed = await wb.get(`bypass.${member.guild.id}`);
-	if(!bypassed.includes(member.id)) {
-	
 	let day = Number(age)
     let x = Date.now() - member.user.createdAt;
     let created = Math.floor(x / 86400000);
@@ -450,7 +442,7 @@ bot.on('guildMemberAdd', async member => {
 			.addField(
 				`Account Age`, moment(member.user.createdAt).format('MMMM Do YYYY, h:mm:ss a'))
       .addField(`Punishment`, punishment)
-			.setColor('#FF0000')
+			.setColor('EF4949')
 			.setFooter(
 				member.guild.name,
 				member.guild.iconURL({ dynamic: true })
@@ -458,7 +450,7 @@ bot.on('guildMemberAdd', async member => {
 		if (channel) channel.send({ embed: embed });
 	}
 	}
-});
+);
 
 function parseMs(str) {
 		const parts = str.split(' ');
