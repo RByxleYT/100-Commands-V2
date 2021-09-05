@@ -14,13 +14,13 @@ module.exports = {
   
     if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new MessageEmbed()
     .setTitle("Error")
-    .setDescription(":x: Sorry but you dont have permission to use this command!!")
-    .setColor("#FF0000")
+    .setDescription("<:Decline:864080227738320896> Sorry but you dont have permission to use this command!!")
+    .setColor('EF4949')
     .setTimestamp()
     );
     
    let embed = new MessageEmbed()
-   .setColor("RANDOM")
+   .setColor("#4169E1")
    .setTitle("What Setup do u want?")
    .setDescription(`
    **1.** \`Welcome Background\`\n**2.** \`Leave Background\``)
@@ -51,7 +51,7 @@ module.exports = {
    
    function welcomesystem() {
      let wembed = new MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#4169E1")
     .setTitle("What do u want to do?")
     .setDescription(`
 **1.** \`Set Welcome Background\` - *Sets the Welcome Background Image*
@@ -66,7 +66,7 @@ module.exports = {
                 let qembed = new MessageEmbed()
                 .setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription("Send an image or link below here!!")
-                .setColor("RANDOM")
+                .setColor("#4169E1")
                 .setFooter("Background Setup")
                 .setTimestamp();
                   
@@ -85,7 +85,7 @@ module.exports = {
             
             message.channel.send(new MessageEmbed()
             .setTitle("Success!!")
-            .setColor("RANDOM")
+            .setColor("#4169E1")
             .setDescription("I have successfully seted the welcome image in this server.\n\nPlease make sure to **not** delete your Image from the Channel!")
             .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({
               dynamic: true
@@ -126,7 +126,7 @@ module.exports = {
               db.delete(`WelIm_${message.guild.id}`);
               return message.channel.send(new MessageEmbed()
               .setTitle("Success")
-              .setColor("RANDOM")
+              .setColor("#4169E1")
               .setDescription("I have successfully deleted the Background Image in the server")
               .setTimestamp()
               );
@@ -145,7 +145,7 @@ module.exports = {
  
      function leavesystem() {
      let wembed = new MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#4169E1")
     .setTitle("What do u want to do?")
     .setDescription(`
 **1.** \`Set Leave Background\` - *Sets the Leave Background Image*
@@ -162,7 +162,7 @@ module.exports = {
          .setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
          .setDescription("Please send a image or link here!!")
          .setFooter("Background Setup")
-         .setColor("RANDOM")
+         .setColor("#4169E1")
          .setTimestamp();
          
             message.reply(cembed).then(msg => {
@@ -220,7 +220,7 @@ module.exports = {
               db.delete(`Leaveim_${message.guild.id}`);
               return message.channel.send(new MessageEmbed()
               .setTitle("Success")
-              .setColor("RANDOM")
+              .setColor("#4169E1")
               .setDescription("I have successfully deleted the Background Image in the server")
               .setTimestamp()
               );
