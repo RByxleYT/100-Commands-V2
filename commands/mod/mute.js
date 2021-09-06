@@ -71,13 +71,13 @@ module.exports = {
             }
                 if (reason) {
                 const sembed = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setAuthor(message.guild.name, message.guild.iconURL())
                     .setDescription(`${mutee.user.username} was successfully muted for ${reason}`)
                 message.channel.send(sembed);
                 } else {
                     const sembed2 = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(`${mutee.user.username} was successfully muted`)
                 message.channel.send(sembed2);
                 }
