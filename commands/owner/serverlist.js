@@ -35,7 +35,7 @@ module.exports = {
           message.author.tag,
           message.author.displayAvatarURL({ dynamic: true })
         )
-        .setColor("GREEN")
+        .setColor('45BB8A')
         .setFooter(bot.user.username)
         .setTitle(`Page - ${page}/${Math.ceil(bot.guilds.cache.size / 10)}`)
         .setDescription(description);
@@ -44,7 +44,7 @@ module.exports = {
 
       await msg.react("⬅");
       await msg.react("➡");
-      await msg.react("❌");
+      await msg.react("<:Decline:864080227738320896>");
 
       let collector = msg.createReactionCollector(
         (reaction, user) => user.id === message.author.id
@@ -124,7 +124,7 @@ module.exports = {
           msg.edit(embed);
         }
 
-        if (reaction._emoji.name === "❌") {
+        if (reaction._emoji.name === "<:Decline:864080227738320896>") {
           return msg.delete();
         }
 
