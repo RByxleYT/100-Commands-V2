@@ -19,13 +19,12 @@ module.exports = {
     
     if(!role) return message.channel.send("Please provide a role to remove from said user.") 
     
-
     if(!message.guild.me.hasPermission(["MANAGE_ROLES"])) return message.channel.send("I don't have permission to perform this command. Please give me Manage Roles Permission!")
 
     if(!rMember.roles.cache.has(role.id)) {
       let rolDEL_err = new MessageEmbed()
-      .setColor(`#FF0000`)
-      .setDescription(`Error ❌ | ${rMember.displayName}, Does not have this role!`);
+      .setColor('EF4949')
+      .setDescription(`Error <:Decline:864080227738320896> | ${rMember.displayName}, Does not have this role!`);
 
       return message.channel.send(rolDEL_err)
     
@@ -34,8 +33,8 @@ module.exports = {
       await rMember.roles.remove(role.id).catch(e => console.log(e.message))
       
       let rolDEL = new MessageEmbed()
-      .setColor(`#00FF00`)
-      .setDescription(`Success ✅ | ${rMember} has been removed from **${role.name}**`)
+      .setColor('45BB8A')
+      .setDescription(`Success <:Accepted:864080263172718603> | ${rMember} has been removed from **${role.name}**`)
 
       message.channel.send(rolDEL)
     
