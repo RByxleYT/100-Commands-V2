@@ -26,7 +26,7 @@ module.exports = {
   const embed = new MessageEmbed()
     .setTitle("Text to Binary")
     .setThumbnail(
-      "https://png.pngtree.com/png-clipart/20200225/original/pngtree-binary-code-and-magnifying-glass-isometric-icon-png-image_5252004.jpg"
+      "https://live.staticflickr.com/572/20607150556_c01d092437_b.jpg"
     )
 
     .setDescription("**Binary Code** - `" + data.binary + "`")
