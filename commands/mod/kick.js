@@ -40,7 +40,7 @@ module.exports = {
 			if (kickMember.id === message.member.id)
 				return message.channel.send('**You Cannot Kick Yourself!**');
 				   if (kickMember.roles.highest.position >= message.member.roles.highest.position && message.author.id !== message.guild.owner.id) {
-            return message.channel.send(":x: | **You can\'t kick this member due to your role being lower than that member role.**")
+            return message.channel.send("<:Decline:864080227738320896> | **You can\'t kick this member due to your role being lower than that member role.**")
         }
 
 			if (kickMember.kickable) {
@@ -55,7 +55,7 @@ module.exports = {
 					.send(sembed2);
 				kickMember.kick();
 			} else {
-			  return message.channel.send(":x: | **I can\'t kick this user make sure that the users role is lower than my role.**");
+			  return message.channel.send("<:Decline:864080227738320896> | **I can\'t kick this user make sure that the users role is lower than my role.**");
 			}
 			if (reason) {
 				var sembed = new MessageEmbed()
@@ -75,7 +75,7 @@ module.exports = {
 
 			const embed = new MessageEmbed()
 				.setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
-				.setColor('#ff0000')
+				.setColor('EF4949')
 				.setThumbnail(kickMember.user.displayAvatarURL({ dynamic: true }))
 				.setFooter(message.guild.name, message.guild.iconURL())
 				.addField('**Moderation**', 'kick')
