@@ -28,7 +28,7 @@ module.exports = {
         try {
         member.setNickname(nick)
         const embed = new MessageEmbed()
-            .setColor("GREEN")
+            .setColor('45BB8A')
             .setDescription(`**Changed Nickname of ${member.displayName} to ${nick}**`)
         message.channel.send(embed)
         } catch {
@@ -40,7 +40,7 @@ module.exports = {
 
         const sembed = new MessageEmbed()
             .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
-            .setColor("#ff0000")
+            .setColor('EF4949')
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
             .setFooter(message.guild.name, message.guild.iconURL())
             .addField("**Moderation**", "setnick")
