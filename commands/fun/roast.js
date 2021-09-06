@@ -18,7 +18,7 @@ module.exports = {
         if(!args[0]) {
             const sembed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL())
-                .setColor("GREEN")
+                .setColor('45BB8A')
                 .setDescription("**Do You Really Want To Roast Yourself?**")
                 .setFooter(message.member.displayName, message.author.displayAvatarURL())
                 .setTimestamp()
@@ -28,7 +28,7 @@ module.exports = {
             const embed = new MessageEmbed()
                 .setAuthor(message.guild.name, message.guild.iconURL())
                 .setTitle(`${message.author.username}-`)
-                .setColor("GREEN")
+                .setColor('45BB8A')
                 .setDescription(`${roast}`)
                 .setFooter(member.displayName, member.user.displayAvatarURL())
                 .setTimestamp()
