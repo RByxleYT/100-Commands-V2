@@ -24,7 +24,7 @@ module.exports = {
 
         try {
             member.voice.setDeaf(true, reason);
-            message.channel.send("Success ✅ : Member Deafened")
+            message.channel.send("Success <:Accepted:864080263172718603> : Member Deafened")
         } 
         
         catch(error) {
