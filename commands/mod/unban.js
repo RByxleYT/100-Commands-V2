@@ -28,13 +28,13 @@ module.exports = {
             if (reason) {
                 message.guild.members.unban(bannedMember.user.id, reason)
                 var sembed = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(`**${bannedMember.user.tag} has been unbanned for ${reason}**`)
                 message.channel.send(sembed)
             } else {
                 message.guild.members.unban(bannedMember.user.id, reason)
                 var sembed2 = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(`**${bannedMember.user.tag} has been unbanned**`)
                 message.channel.send(sembed2)
             }
@@ -46,7 +46,7 @@ module.exports = {
         if (!channel) return;
 
         let embed = new MessageEmbed()
-            .setColor("#ff0000")
+            .setColor('EF4949')
             .setThumbnail(bannedMember.user.displayAvatarURL({ dynamic: true }))
             .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
             .addField("**Moderation**", "unban")
