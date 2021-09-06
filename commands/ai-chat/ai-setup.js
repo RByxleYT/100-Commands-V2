@@ -15,14 +15,14 @@ module.exports = {
 				new MessageEmbed()
 					.setTitle('Error')
 					.setDescription(
-						':x: Sorry but you dont have permission to use this command!!'
+						'<:Decline:864080227738320896> Sorry but you dont have permission to use this command!!'
 					)
-					.setColor('#FF0000')
+					.setColor('EF4949')
 					.setTimestamp()
 			);
 
 		let embed = new MessageEmbed()
-			.setColor('RANDOM')
+			.setColor('#4169E1')
 			.setTitle('What Setup do u want?')
 			.setDescription(
 				`${
@@ -75,7 +75,7 @@ module.exports = {
 										.setDescription(
 											'Please mention the channel in which the AI-Chat setup is to be created\nType `cancel` if you wanna stop the setup'
 										)
-										.setColor('RANDOM')
+										.setColor('#4169E1')
 								);
 								startMessageCollectors(bot, message, args);
 								function startMessageCollectors(bot, message, args) {
@@ -90,13 +90,13 @@ module.exports = {
 										let channel =  msg.mentions.channels.first();
 										if (msg.content.toLowerCase() === 'cancel') {
 											msg.channel.send(
-												'The AI-Chat system setup has been stopped.Run the command again to start a new one!!'
+												'The AI-Chat system setup has been stopped. Run the command again to start a new one!!'
 											);
 											channelCollector.stop();
 											return;
 										} else if (!channel) {
 											await msg.channel.send(
-												':x: Setup cancelled.Please mention a valid channel!!'
+												'<:Decline:864080227738320896> Setup cancelled. Please mention a valid channel!!'
 											);
 											await channelCollector.stop();
 											return;
