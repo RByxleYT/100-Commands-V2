@@ -39,35 +39,35 @@ module.exports = {
             if (description.length > 8192) {
                 const FirstEmbed = new MessageEmbed()
                     .setAuthor(result.raw.title)
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(`${description.substring(0, 1950)}...\nArticle is too long, click [**here**](${result.raw.fullurl}) to read more!`);
                 return m.edit(FirstEmbed);
             } if (description.length < 2048) {
                 const SecondEmbed = new MessageEmbed()
                     .setAuthor(result.raw.title)
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(`${description.slice(0, 2048)}`)
                 return m.edit('', SecondEmbed)
             } if (description.length > 2048) {
                 const ThirdEmbed = new MessageEmbed()
                     .setAuthor(result.raw.title)
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(description.slice(0, 2048))
                 const FourthEmbed = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(description.slice(2048, 4096))
                 m.edit('', ThirdEmbed)
                 message.channel.send('', FourthEmbed)
             } if (description.length > 4096 && description.length < 6144) {
                 const FifthEmbed = new MessageEmbed()
                     .setAuthor(result.raw.title)
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(description.slice(0, 2048))
                 const SixthEmbed = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(description.slice(2048, 4096))
                 const SeventhEmbed = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(description.slice(4096, description.length))
                 await m.edit('', FifthEmbed)
                 message.channel.send(SixthEmbed)
@@ -80,10 +80,10 @@ module.exports = {
                     .setColor('GREEN')
                     .setDescription(description.slice(2048, 4096));
                 const TenthEmbed = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(description.slice(4096, 6144));
                 const EleventhEmbed = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setDescription(description.slice(6144, description.length))
                 await m.edit('', EightEmbed);
                 message.channel.send(NinthEmbed);
