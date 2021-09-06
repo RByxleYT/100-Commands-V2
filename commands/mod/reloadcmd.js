@@ -15,8 +15,8 @@ module.exports = {
         if(message.author.id != OWNER_ID) {
           const rembed = new MessageEmbed()
           .setTitle("Error")
-          .setDescription(":x: You are not authorized to use this command as it is resticted to the owner only")
-          .setColor("#FF0000")
+          .setDescription("<:Decline:864080227738320896> You are not authorized to use this command as it is resticted to the owner only")
+          .setColor('EF4949')
           .setFooter(message.author.username, bot.user.displayAvatarURL())
           .setTimestamp();
         message.channel.send(rembed).then(m => m.delete({
