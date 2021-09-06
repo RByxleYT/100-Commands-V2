@@ -23,14 +23,14 @@ module.exports = {
 
         try{
             if (args.join(" ").toLowerCase().includes("token")) {
-                return message.reply("Are you crazy ;-; You are going to give out your token public.I stopped it hopefully...")
+                return message.reply("Are you crazy ;-; You are going to give out your token public. I stopped it hopefully...")
             }
         
             const toEval = args.join(" ");
             const evaluated = eval(toEval); 
 
             let embed = new Discord.MessageEmbed()
-            .setColor("#00FF00")
+            .setColor('45BB8A')
             .setTimestamp()
             .setFooter(bot.user.username)
             .setTitle("Eval")
@@ -42,8 +42,8 @@ module.exports = {
 
         } catch (e) {
             let embed = new Discord.MessageEmbed()
-            .setColor("#FF0000")
-            .setTitle(`:x: Error!`)
+            .setColor('EF4949')
+            .setTitle(`<:Decline:864080227738320896> Error!`)
             .setDescription(e)
 
             message.channel.send(embed);
