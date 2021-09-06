@@ -16,7 +16,7 @@ module.exports = {
     const Invite = `https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&permissions=8&scope=bot`, Owne = `${Owner_Name}`, Dev = ``;
     
     const Embed = new Discord.MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#4169E1")
     .setTitle("Thanks for using the bot")
     .addField("Invite Me", `[Click Me](${Invite})`, true)
     .addField("Support Server", `[Click Me](${support})`, true)
