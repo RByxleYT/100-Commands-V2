@@ -467,4 +467,4 @@ function decodeMs(num) {
 
 
 
-bot.login(process.env.TOKEN);
+bot.login(TOKEN);
