@@ -45,7 +45,7 @@ module.exports = {
     }
 
     let embed = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor("#4169E1")
       .setDescription(`${Content}`)
       .setTimestamp();
 
