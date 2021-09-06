@@ -12,7 +12,7 @@ module.exports = {
     run: async (bot, message, args) => {
         let warnPermErr = new MessageEmbed()
         .setTitle("**User Permission Error!**")
-        .setDescription("**Sorry, you don't have permissions to use this! ❌**")
+        .setDescription("**Sorry, you don't have permissions to use this! <:Decline:864080227738320896>**")
             if(!message.channel.permissionsFor(message.member).has(['MANAGE_MESSAGES'])) return message.channel.send(warnPermErr);
     
             let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
@@ -31,7 +31,7 @@ module.exports = {
             
             db.set(`warnings_${message.guild.id}_${member.id}`, 1)
             
-            member.send(`You have been warned by <${message.author.username}> for this reason: ${reason}`)
+            member.send(`You have been warned by ${message.author.username} for this reason: ${reason}`)
             .catch(error => message.channel.send(`Sorry <${message.author}> I couldn't n't warn because of : ${error}`));
             let warnEmbed = new MessageEmbed()
             .setTitle("**__Warn Report__**")
@@ -45,8 +45,8 @@ module.exports = {
             }));
     } else if (warnings !== null) {
       db.add(`warnings_${message.guild.id}_${member.id}`, 1)
-      member.send(`You have been warned by <${message.author.username}> for this reason: ${reason}`)
-            .catch(error => message.channel.send(`Sorry <${message.author}> I couldn't n't warn because of : ${error}`));
+      member.send(`You have been warned by ${message.author.username} for this reason: ${reason}`)
+            .catch(error => message.channel.send(`Sorry ${message.author} I couldn't n't warn because of : ${error}`));
             let ddEmbed = new MessageEmbed()
             .setTitle("**__Warn Report__**")
             .setDescription(`**<@${member.user.id}> has been warned by <@${message.author.id}>**`)
