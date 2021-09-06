@@ -21,7 +21,7 @@ module.exports = {
         var acknowledgements = 'None';
         let whoisPermErr = new Discord.MessageEmbed()
         .setTitle("**User Permission Error!**")
-        .setDescription("**Sorry, you don't have permissions to use this! ❌**")
+        .setDescription("**Sorry, you don't have permissions to use this! <:Decline:864080227738320896>**")
 
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
         
@@ -77,7 +77,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
             .setDescription(`<@${member.user.id}>`)
             .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL())
-            .setColor('RANDOM')
+            .setColor('#4169E1')
             .setFooter(`ID: ${message.author.id}`)
             .setThumbnail(member.user.displayAvatarURL())
             .setTimestamp()
