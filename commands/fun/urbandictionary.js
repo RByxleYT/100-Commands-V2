@@ -20,7 +20,7 @@ module.exports = {
                 let { word, urbanURL, definition, example, thumbsUp, thumbsDown, author } = res;
 
                 let embed = new MessageEmbed()
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setAuthor(`Word - ${word}`)
                     .setThumbnail(image)
                     .setDescription(`**Defintion:**\n*${definition || "No definition"}*\n\n**Example:**\n*${example || "No Example"}*`)
