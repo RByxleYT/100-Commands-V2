@@ -37,7 +37,7 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setAuthor(message.guild.name, message.guild.iconURL({ dynamic: true }))
 			.setThumbnail(message.guild.iconURL({ dynamic: true }))
-			.setColor('RANDOM')
+			.setColor('#4169E1')
 			.addField('Owner', message.guild.owner.user.tag)
 			.addField('Region', regions[message.guild.region])
 			.addField(
