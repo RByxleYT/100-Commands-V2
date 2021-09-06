@@ -44,7 +44,7 @@ module.exports = {
       let Embed = new MessageEmbed()
         .setTitle(`8Ball!`)
         .setDescription(`Your question: ${question}\nMy reply: ${response}`)
-        .setColor(`RANDOM`);
+        .setColor('45BB8A');
       message.channel.send(Embed);
     }
   },
