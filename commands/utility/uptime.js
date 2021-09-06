@@ -16,7 +16,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setTitle("Uptime")
-            .setColor("RANDOM")
+            .setColor("#4169E1")
             .setDescription(`I am Online from **${days}** days, **${hours}** hours, **${minutes}** minutes, **${seconds}** seconds`)
             .setThumbnail(bot.user.displayAvatarURL())
             .setFooter(message.guild.name, message.guild.iconURL())
