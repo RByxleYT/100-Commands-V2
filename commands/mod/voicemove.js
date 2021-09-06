@@ -22,7 +22,7 @@ module.exports = {
 
         try {
             member.voice.setChannel(channel);
-            message.channel.send("Success ✅ : Member Moved!")
+            message.channel.send("Success <:Accepted:864080263172718603> : Member Moved!")
         } 
         
         catch(error) {
