@@ -15,7 +15,7 @@ module.exports = {
         if (!user.presence.activities.length) {
             const sembed = new MessageEmbed()
                 .setAuthor(user.user.username, user.user.displayAvatarURL({ dynamic: true }))
-                .setColor("GREEN")
+                .setColor('45BB8A')
                 .setThumbnail(user.user.displayAvatarURL())
                 .addField("**No Status**", 'This user does not have any custom status!')
                 .setFooter(message.guild.name, message.guild.iconURL())
@@ -29,7 +29,7 @@ module.exports = {
             if (activity.type === 'CUSTOM_STATUS') {
                 const embed = new MessageEmbed()
                     .setAuthor(user.user.username, user.user.displayAvatarURL({ dynamic: true }))
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .addField("**Status**", `**Custom status** -\n${activity.emoji || "No Emoji"} | ${activity.state}`)
                     .setThumbnail(user.user.displayAvatarURL())
                     .setFooter(message.guild.name, message.guild.iconURL())
@@ -44,8 +44,9 @@ module.exports = {
 
                 const sembed = new MessageEmbed()
                     .setAuthor(`${user.user.username}'s Activity`)
-                    .setColor(0xFFFF00)
+                    
                     .setThumbnail(image)
+                    .setColor('45BB8A')
                     .addField("**Type**", "Playing")
                     .addField("**App**", `${name1}`)
                     .addField("**Details**", `${details1 || "No Details"}`)
@@ -65,7 +66,7 @@ module.exports = {
 
                 const embed = new MessageEmbed()
                     .setAuthor('Spotify Track Info', 'https://cdn.discordapp.com/emojis/408668371039682560.png')
-                    .setColor("GREEN")
+                    .setColor('45BB8A')
                     .setThumbnail(trackIMG)
                     .addField('Song Name', trackName, true)
                     .addField('Album', trackAlbum, true)
