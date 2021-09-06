@@ -24,13 +24,13 @@ module.exports = {
 			return message.channel.send("I dont have permissions to ban someone");
 		}
 		if(tbuser === message.guild.me) {
-			return ("Why you wanna ban me!!");
+			return ("Why you wanna ban me!");
 		}
 		if (!tbuser) {
 			return message.channel.send("You need to specify a user ``@user``");
 		}
 		if (tbuser.id == message.author.id) {
-			return message.channel.send("Really!! Are you going to ban yourself..");
+			return message.channel.send("Really?! Are you going to ban yourself..");
 		}
 		if(tbuser.roles.highest.position >= message.member.roles.highest.position) {
 			return("You cant ban that person\nreason: Highest perms or roles");
@@ -43,7 +43,7 @@ module.exports = {
 		
 		const tbuembed = new MessageEmbed()
 			.setTitle("You have been banned!")
-			.setColor("#854ae3")
+			.setColor('45BB8A')
 			.addField("Reason:", reason)
 			.addField("Time (s)", regex)
 			.addField("Moderator:", message.author.username);
@@ -52,7 +52,7 @@ module.exports = {
 			.setTitle("Action: Tempban")
 			.addField("User:", tbuser)
 			.setAuthor(`${message.author.username}`)
-			.setColor("#854ae3")
+			.setColor('45BB8A')
 			.addField("Reason:", reason)
 			.addField("Time (s)", regex)
 			.addField("Moderator:", message.author.username);
