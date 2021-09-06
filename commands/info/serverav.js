@@ -16,7 +16,7 @@ module.exports = {
     }))
     .setDescription(`**Download This Server's Avatar**\n[Click Here](${message.guild.iconURL({ dynamic: true, size: 1024 })})`)
     .setImage(message.guild.iconURL({ dynamic: true, size: 1024 }))
-    .setColor("RANDOM");
+    .setColor("#4169E1");
     
       message.channel.send(embed)
     
