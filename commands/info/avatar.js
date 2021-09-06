@@ -31,7 +31,7 @@ const embed = new Discord.MessageEmbed()
 
 .setTitle(`${user.tag} avatar`)
 .setDescription(`[Avatar URL of ${user.tag}](${avatar})`) 
-.setColor("RANDOM")
+.setColor("#4169E1")
 .setImage(avatar);
 
 return message.channel.send(embed);
