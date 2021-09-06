@@ -13,7 +13,7 @@ config: {
   run: async (bot, message, args) => {
    message.delete();
       message.channel.send(new Discord.MessageEmbed()
-            .setColor('RANDOM')
+            .setColor('#4169E1')
             .setAuthor(`${bot.user.username} v${version}`, bot.user.displayAvatarURL())
             .setThumbnail(bot.user.displayAvatarURL({ dynamic: true }))
             .addField('❯ Uptime :', `${ms(bot.uptime)}`, true)
