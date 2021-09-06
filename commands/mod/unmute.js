@@ -47,7 +47,7 @@ module.exports = {
             mutee.roles.add(roleadds2)                            
           }
             const sembed = new MessageEmbed()
-                .setColor("GREEN")
+                .setColor('45BB8A')
                 .setDescription(`${mutee.user.username} was successfully unmuted.`)
             message.channel.send(sembed);
         
