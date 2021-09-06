@@ -2,7 +2,8 @@ require("dotenv").config();
 console.log("Testing");
 //Defining dependencies
 const { Client, Collection } = require('discord.js');
-const { PREFIX, TOKEN } = require('./config.js');
+const { PREFIX } = require('./config.js');
+const config = require("./config.json")
 const discord = require("discord.js");
 const moment = require("moment");
 const ms = require('ms');
