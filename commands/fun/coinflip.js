@@ -14,7 +14,7 @@ module.exports = {
         if (n === 1) result = 'Heads';
         else result = 'Tails';
         const embed = new MessageEmbed()
-            .setColor("GREEN")
+            .setColor('45BB8A')
             .setDescription(`**${message.member.displayName} Flipped ${result}**!`)
         message.channel.send(embed);
     }
