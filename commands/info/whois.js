@@ -86,7 +86,7 @@ module.exports = {
             .addField('__Created On__', member.user.createdAt.toLocaleString(), true)
             .addField("__Playing__", member.presence.activities[0] ? member.presence.activities[0].state : `User isn't have a custom status!`, true)
             .addField(`\n__Roles [${member.roles.cache.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).length}]__`,`${member.roles.cache.filter(r => r.id !== message.guild.id).map(roles => `<@&${roles.id }>`).join(" **|** ") || "No Roles"}`, true)
-            .addField("\n__Acknowledgements:__ ", `${acknowledgements}`, true)
+            .addField("\n__Acknowledgements__ ", `${acknowledgements}`, true)
             .addField("\n__Permissions:__ ", `${permissions.join(` | `)}`);
             
         message.channel.send({embed});
