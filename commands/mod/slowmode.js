@@ -41,7 +41,7 @@ module.exports = {
         embed.setTitle('Slowmode Enabled')
             .addField('Slowmode: ', args[0])
             .addField('Reason: ', reason)
-            .setColor('#ff0000');
+            .setColor('EF4949');
 
         message.channel.setRateLimitPerUser(time, reason).then(m => m.send(embed));
 
