@@ -16,7 +16,7 @@ module.exports = {
         } else {
         const embed = new MessageEmbed()
         .setDescription(`Your afk has been removed`)
-        .setColor("GREEN")
+        .setColor('45BB8A')
         .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic : true }))
         .setTimestamp();
         message.channel.send(embed)                }
