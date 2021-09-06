@@ -18,7 +18,7 @@ module.exports = {
       .setTitle("Shuffled!")
       .setDescription("Now Try To Guess It!")
       .addField("Shuffle Word", `Type this shuffled word \`${res.result}\`\nOptions: \`cancel\`,\`reshuffle\``)
-      .setColor("RANDOM");
+      .setColor("#4169E1");
     await message.channel.send(firstbd)
     const gameFilter = m => m.author.id
     const gameCollector = message.channel.createMessageCollector(gameFilter);
@@ -45,7 +45,7 @@ module.exports = {
           .setTitle("Shuffled!")
           .setDescription("Here's the word..Try another time to guess it!!")
           .addField("Shuffled Word", `Type it correctly - \`${res.result}\`\nOptions: \`cancel\`,\`reshuffle\``)
-          .setColor("RANDOM");
+          .setColor("#4169E1");
         const ress = await (await (fetch(`https://api.monkedev.com/fun/shuffle?content=${word}&key=EjLY54Vys5kJVWgcfaA1RjFIp`))).json();
         message.channel.send(reshbd)
       } else if (selection !== word) {
