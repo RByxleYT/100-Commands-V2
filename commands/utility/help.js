@@ -34,12 +34,12 @@ run: async (bot, message, args) => {
     AllCommands = [];
 
 const Emotes = {
-    admin: "Admin - (15)",
-    fun: "Fun - (26)",
-    images: "Images - (20)",
-    info: "Info - (12)",
-    mod: "Mod - (22)",
-    utility: "Utility - (8)"
+    admin: "🚨 Admin - (15)",
+    fun: "🎮 Fun - (26)",
+    images: "🖼️ Images - (20)",
+    info: "📜 Info - (12)",
+    mod: "🔧 Mod - (23)",
+    utility: "✂️ Utility - (8)"
 };
 
 
@@ -51,7 +51,7 @@ for (let i = 0; i < Categories.length; i++) {
 const Description = `My Prefix For **${message.guild.name}** Is **${prefix}**\n\nFor More Command Information, Type The Following Command:\n**${prefix}help <command Name> or** <@${bot.user.id}> **help <command name>**`;
 
 const Embed = new Discord.MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#4169E1")
     .setAuthor("Commands", message.author.avatarURL({
         dynamic: true
     }))
@@ -63,7 +63,7 @@ if (!args[0]) return message.channel.send(Embed);
 
 else {
     const embed = new Discord.MessageEmbed()
-    .setColor("RANDOM")
+    .setColor("#4169E1")
     .setAuthor(`${message.guild.me.displayName} Help`, message.guild.iconURL())
     .setThumbnail(bot.user.displayAvatarURL())
 
